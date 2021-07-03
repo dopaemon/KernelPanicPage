@@ -13,7 +13,6 @@ task:
     cpu: .7
     memory: 1G
   config_script:
-    - ls ~/.ssh  
     - git config --global user.name "dopaemon"
     - git config --global user.email "polarisdp@gmail.com"
     - mkdir -p ~/.ssh
