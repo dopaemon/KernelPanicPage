@@ -24,7 +24,7 @@ task:
     - chmod 400 ~/.ssh/*
   git_script:
     - git clone git@github.com:KernelPanic-OpenSource/KernelPanic-OpenSource.github.io.git ~/Repo
-    - git clone https://github.com/dopaemon/KernelPanicPage ~/Repo1
+    - git clone git@github.com:dopaemon/KernelPanicPage.git ~/Repo1
   build_script:
     - cd ~/Repo
     - rm -rvf Packages.bz2
