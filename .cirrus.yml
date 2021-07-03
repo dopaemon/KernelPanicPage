@@ -7,7 +7,7 @@ env:
 
 task:
   name: Build_Upload
-  timeout_in: 2h
+  timeout_in: 3m
   container:
     image: alpine/git
     cpu: .1
