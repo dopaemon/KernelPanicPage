@@ -10,8 +10,8 @@ task:
   timeout_in: 2h
   container:
     image: alpine/git
-    cpu: .7
-    memory: 1G
+    cpu: .1
+    memory: .1G
   config_script:
     - git config --global user.name "dopaemon"
     - git config --global user.email "polarisdp@gmail.com"
