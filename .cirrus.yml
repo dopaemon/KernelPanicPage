@@ -13,33 +13,33 @@ task:
     cpu: .7
     memory: 1G
   config_script:
-    - git config --global user.name "dopaemon"
-    - git config --global user.email "polarisdp@gmail.com"
-    - mkdir -p ~/.ssh
-    - ssh-keyscan -H github.com >> ~/.ssh/known_hosts
-    - touch ~/.ssh/id_ed25519.pub
-    - touch ~/.ssh/id_ed25519
-    - echo "$ssh2" > ~/.ssh/id_ed25519.pub
-    - echo "$ssh1" > ~/.ssh/id_ed25519
+    - sudo git config --global user.name "dopaemon"
+    - sudo git config --global user.email "polarisdp@gmail.com"
+    - sudo mkdir -p ~/.ssh
+    - sudo ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+    - sudo touch ~/.ssh/id_ed25519.pub
+    - sudo touch ~/.ssh/id_ed25519
+    - sudo echo "$ssh2" > ~/.ssh/id_ed25519.pub
+    - sudo echo "$ssh1" > ~/.ssh/id_ed25519
   git_script:
-    - git clone git@github.com:KernelPanic-OpenSource/KernelPanic-OpenSource.github.io.git ~/Repo
-    - git clone https://github.com/dopaemon/KernelPanicPage ~/Repo1
+    - sudo git clone git@github.com:KernelPanic-OpenSource/KernelPanic-OpenSource.github.io.git ~/Repo
+    - sudo git clone https://github.com/dopaemon/KernelPanicPage ~/Repo1
   build_script:
-    - cd ~/Repo
-    - rm -rvf Packages.bz2
-    - git rm Packages.bz2
-    - bzip2 -zvk Packages
-    - touch loop
-    - echo "Loading..." >> loop
-    - git add -v -A
-    - git commit -sm "Update Packages"
+    - sudo cd ~/Repo
+    - sudo rm -rvf Packages.bz2
+    - sudo git rm Packages.bz2
+    - sudo bzip2 -zvk Packages
+    - sudo touch loop
+    - sudo echo "Loading..." >> loop
+    - sudo git add -v -A
+    - sudo git commit -sm "Update Packages"
   push_script:
-    - cd ~/Repo
-    - echo "yes" | git push -f origin master
+    - sudo cd ~/Repo
+    - sudo echo "yes" | git push -f origin master
   loop_script:
-    - cd ~/Repo1
-    - touch loop
-    - echo "Loading..." >> loop
-    - git add -v -A
-    - git commit -sm "LoopCI"    
-    - echo "yes" | git push -f origin master    
+    - sudo cd ~/Repo1
+    - sudo touch loop
+    - sudo echo "Loading..." >> loop
+    - sudo git add -v -A
+    - sudo git commit -sm "LoopCI"    
+    - sudo echo "yes" | git push -f origin master    
