@@ -11,7 +11,7 @@ task:
   container:
     image: alpine/git
     cpu: .1
-    memory: .1G
+    memory: 100M
   config_script:
     - git config --global user.name "dopaemon"
     - git config --global user.email "polarisdp@gmail.com"
