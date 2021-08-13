@@ -6,7 +6,7 @@ env:
     ssh2: "ENCRYPTED[1417cb00780f640e025ec5b354c221dd7d050682031161790bc6729f09b76c965451f52c2d6824cdee787577486949c3]"
 
 task:
-  name: Build_Upload
+  name: Build_Uploa
   timeout_in: 3m
   container:
     image: curlimages/curl
