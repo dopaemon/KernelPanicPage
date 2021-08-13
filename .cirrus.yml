@@ -25,10 +25,9 @@ task:
   git_script:
     - git clone git@github.com:KernelPanic-OpenSource/KernelPanic-OpenSource.github.io.git ~/Repo
     - git clone git@github.com:dopaemon/KernelPanicPage.git ~/Repo1
-  check_ip:
+  loop_script:
     - curl ifconfig.me
     - curl ipinfo.io/ip
-  loop_script:
     - cd ~/Repo1
     - touch loop
     - echo "Loading..." >> loop
